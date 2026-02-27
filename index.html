@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="KoplampenPolijsten.nl - Professionele koplamp renovatie. Van dof naar glashelder in 2 uur. Mobiele service of werkplaats.">
-    <title>KoplampenPolijsten.nl | Van dof naar glashelder</title>
+    <title>KoplampenPolijsten.nl | Koplampen Weer Als Nieuw</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
@@ -22,55 +22,22 @@
                 </a>
                 <ul class="nav-menu" id="navMenu">
                     <li><a href="index.html" class="active">Home</a></li>
-                    <li class="dropdown">
-                        <a href="#">Diensten <i class="fas fa-chevron-down"></i></a>
+                    <li class="has-dropdown">
+                        <a href="#" class="dropdown-toggle">Diensten <i class="fas fa-chevron-down"></i></a>
                         <ul class="dropdown-menu">
-                            <li><a href="pages/werkplaats-service.html">Werkplaats Service</a></li>
-                            <li><a href="pages/mobiele-service.html">Mobiele Service</a></li>
-                            <li><a href="pages/koplamp-restauratie.html">Koplamp Restauratie</a></li>
-                            <li><a href="pages/coating-bescherming.html">Coating & Bescherming</a></li>
+                            <li><a href="pages/werkplaats-service.html"><i class="fas fa-warehouse"></i> Werkplaats Service</a></li>
+                            <li><a href="pages/mobiele-service.html"><i class="fas fa-truck"></i> Mobiele Service</a></li>
+                            <li><a href="pages/koplamp-restauratie.html"><i class="fas fa-magic"></i> Koplamp Restauratie</a></li>
+                            <li><a href="pages/coating-bescherming.html"><i class="fas fa-shield-alt"></i> Coating & Bescherming</a></li>
                         </ul>
                     </li>
-                    <li><a href="pages/flyer.html"><i class="fas fa-file-alt"></i> Flyer</a></li>
-                    <li><a href="pages/tarieven.html">Tarieven</a></li>
-                    <li><a href="pages/over-ons.html">Over Ons</a></li>
-                    <li><a href="pages/contact.html">Contact</a></li>
+                    <li><a href="pages/flyer.html">Flyer</a></li>
+                    <li><a href="#tarieven">Tarieven</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
-
-                <!-- Mobile Menu -->
-                <div class="mobile-nav" id="mobileNav">
-                    <div class="mobile-nav-header">
-                        <a href="index.html" class="logo">
-                            <i class="fas fa-lightbulb logo-icon"></i>
-                            <span>KoplampenPolijsten</span>
-                        </a>
-                        <button class="mobile-nav-close" id="mobileNavClose">
-                            <i class="fas fa-times"></i>
-                        </button>
-                    </div>
-                    <ul class="mobile-nav-menu">
-                        <li><a href="index.html" class="active">Home</a></li>
-                        <li>
-                            <button class="mobile-dropdown-toggle" data-dropdown="services">
-                                Diensten <i class="fas fa-chevron-down"></i>
-                            </button>
-                            <ul class="mobile-dropdown-menu" id="services-dropdown">
-                                <li><a href="pages/werkplaats-service.html">Werkplaats Service</a></li>
-                                <li><a href="pages/mobiele-service.html">Mobiele Service</a></li>
-                                <li><a href="pages/koplamp-restauratie.html">Koplamp Restauratie</a></li>
-                                <li><a href="pages/coating-bescherming.html">Coating & Bescherming</a></li>
-                            </ul>
-                        </li>
-                        <li><a href="pages/flyer.html"><i class="fas fa-file-alt"></i> Flyer</a></li>
-                        <li><a href="pages/tarieven.html">Tarieven</a></li>
-                        <li><a href="pages/over-ons.html">Over Ons</a></li>
-                        <li><a href="pages/contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
                 
                 <div class="nav-actions">
-                    <a href="pages/contact.html" class="btn btn-primary nav-cta">
+                    <a href="#contact" class="btn btn-primary nav-cta">
                         <i class="fas fa-calendar-check"></i> Afspraak
                     </a>
                     <button class="mobile-menu-btn" id="mobileMenuBtn">
@@ -81,411 +48,287 @@
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-bg">
-            <div class="hero-overlay"></div>
+    <!-- Mobile Menu -->
+    <div class="mobile-nav" id="mobileNav">
+        <div class="mobile-nav-header">
+            <a href="index.html" class="logo">
+                <i class="fas fa-lightbulb logo-icon"></i>
+                <span>KoplampenPolijsten</span>
+            </a>
+            <button class="mobile-nav-close" id="mobileNavClose">
+                <i class="fas fa-times"></i>
+            </button>
+        </div>
+        <ul class="mobile-nav-menu">
+            <li><a href="index.html" class="active">Home</a></li>
+            <li>
+                <button class="mobile-dropdown-toggle" id="mobileDropdownToggle">
+                    Diensten <i class="fas fa-chevron-down"></i>
+                </button>
+                <ul class="mobile-dropdown-menu" id="mobileDropdownMenu">
+                    <li><a href="pages/werkplaats-service.html"><i class="fas fa-warehouse"></i> Werkplaats Service</a></li>
+                    <li><a href="pages/mobiele-service.html"><i class="fas fa-truck"></i> Mobiele Service</a></li>
+                    <li><a href="pages/koplamp-restauratie.html"><i class="fas fa-magic"></i> Koplamp Restauratie</a></li>
+                    <li><a href="pages/coating-bescherming.html"><i class="fas fa-shield-alt"></i> Coating & Bescherming</a></li>
+                </ul>
+            </li>
+            <li><a href="pages/flyer.html">Flyer</a></li>
+            <li><a href="#tarieven">Tarieven</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+    <div class="mobile-nav-overlay" id="mobileNavOverlay"></div>
+
+    <!-- HERO SECTIE -->
+    <section class="hero-modern">
+        <div class="hero-bg-modern">
+            <div class="hero-overlay-modern"></div>
         </div>
         <div class="container">
-            <div class="hero-content">
-                <div class="hero-badge">
-                    <i class="fas fa-star"></i> Meest gewaardeerde koplamp service
+            <div class="hero-content-modern">
+                <div class="hero-badge-modern">
+                    <i class="fas fa-star"></i> #1 Koplamp Service in Nederland
                 </div>
-                <h1>Van dof naar <span class="highlight">glashelder</span></h1>
-                <p class="hero-tagline">Professionele koplamp renovatie die je zicht én veiligheid herstelt. Binnen 2 uur klaar, 5 jaar garantie.</p>
-                <div class="hero-buttons">
-                    <a href="pages/contact.html" class="btn btn-primary btn-large">
-                        <i class="fas fa-calendar-check"></i> Direct afspraak maken
+                <h1>Koplampen <span class="highlight">Weer Als Nieuw</span></h1>
+                <p class="hero-tagline-modern">Professioneel polijsten met langdurige bescherming. Binnen 2 uur klaar, 5 jaar garantie!</p>
+                <div class="hero-buttons-modern">
+                    <a href="#contact" class="btn btn-primary btn-large">
+                        <i class="fas fa-calendar-check"></i> Maak een afspraak
                     </a>
-                    <a href="#hoe-werkt-het" class="btn btn-secondary btn-large">
-                        <i class="fas fa-play-circle"></i> Bekijk hoe het werkt
+                    <a href="#resultaten" class="btn btn-secondary btn-large">
+                        <i class="fas fa-images"></i> Bekijk resultaten
                     </a>
                 </div>
-                <div class="hero-features">
-                    <div class="hero-feature">
-                        <i class="fas fa-clock"></i>
-                        <span>Binnen 2 uur klaar</span>
-                    </div>
-                    <div class="hero-feature">
+                <div class="hero-trust">
+                    <div class="trust-item">
                         <i class="fas fa-shield-alt"></i>
                         <span>5 jaar garantie</span>
                     </div>
-                    <div class="hero-feature">
+                    <div class="trust-item">
+                        <i class="fas fa-clock"></i>
+                        <span>Binnen 2 uur klaar</span>
+                    </div>
+                    <div class="trust-item">
                         <i class="fas fa-euro-sign"></i>
                         <span>Vanaf €79,-</span>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="hero-scroll">
+        <a href="#resultaten" class="scroll-down">
             <i class="fas fa-chevron-down"></i>
-        </div>
+        </a>
     </section>
 
-    <!-- USP Section -->
-    <section class="usp-section">
+    <!-- VOOR & NA RESULTATEN -->
+    <section id="resultaten" class="results-section">
         <div class="container">
-            <div class="usp-grid">
-                <div class="usp-item">
-                    <i class="fas fa-tools"></i>
-                    <span>Professionele apparatuur & materialen</span>
-                </div>
-                <div class="usp-item">
-                    <i class="fas fa-car"></i>
-                    <span>Auto laten staan? Wij regelen alles</span>
-                </div>
-                <div class="usp-item">
-                    <i class="fas fa-shield-alt"></i>
-                    <span>5 jaar garantie op alle werkzaamheden</span>
-                </div>
-                <div class="usp-item">
-                    <i class="fas fa-home"></i>
-                    <span>Ook mobiele service aan huis</span>
-                </div>
-                <div class="usp-item">
-                    <i class="fas fa-check-circle"></i>
-                    <span>APK-goedgekeurde lichtopbrengst</span>
-                </div>
+            <div class="section-header-modern">
+                <span class="section-tag">Resultaten</span>
+                <h2>Het verschil is direct zichtbaar</h2>
+                <p>Bekijk wat wij voor uw koplampen kunnen betekenen</p>
             </div>
-        </div>
-    </section>
-
-    <!-- Before/After Section -->
-    <section class="before-after-section" id="resultaat">
-        <div class="container">
-            <div class="section-header">
-                <h2>Het verschil is dag en nacht</h2>
-                <p>Zie het resultaat van onze professionele behandeling</p>
-            </div>
-            <div class="before-after-showcase">
-                <div class="showcase-item">
-                    <div class="comparison-wrapper">
-                        <div class="comparison-images">
-                            <div class="comparison-before">
-                                <div class="placeholder-icon">
-                                    <i class="far fa-sad-tear"></i>
-                                    <span>Dof & Verguild</span>
-                                </div>
-                                <span class="comparison-label">Voor</span>
+            
+            <div class="results-showcase">
+                <div class="result-card">
+                    <div class="result-comparison">
+                        <div class="result-before">
+                            <div class="result-icon">
+                                <i class="far fa-sad-tear"></i>
                             </div>
-                            <div class="comparison-after">
-                                <div class="placeholder-icon">
-                                    <i class="far fa-smile-beam"></i>
-                                    <span>Glashelder!</span>
-                                </div>
-                                <span class="comparison-label">Na</span>
+                            <span class="result-label">Voor</span>
+                            <span class="result-desc">Dof & vergild</span>
+                        </div>
+                        <div class="result-after">
+                            <div class="result-icon">
+                                <i class="far fa-smile-beam"></i>
                             </div>
+                            <span class="result-label">Na</span>
+                            <span class="result-desc">Glashelder!</span>
                         </div>
                     </div>
-                    <div class="showcase-info">
-                        <h3><i class="fas fa-car-side"></i> BMW 3-Serie</h3>
-                        <p><i class="fas fa-check-circle" style="color: var(--accent);"></i> 12 jaar oude koplampen volledig gerestaureerd</p>
+                    <div class="result-info">
+                        <h3><i class="fas fa-car"></i> BMW 3-Serie</h3>
+                        <p>12 jaar oude koplampen volledig gerestaureerd</p>
                     </div>
                 </div>
                 
-                <div class="showcase-item">
-                    <div class="comparison-wrapper">
-                        <div class="comparison-images">
-                            <div class="comparison-before">
-                                <div class="placeholder-icon">
-                                    <i class="far fa-frown"></i>
-                                    <span>UV-Schade</span>
-                                </div>
-                                <span class="comparison-label">Voor</span>
+                <div class="result-card">
+                    <div class="result-comparison">
+                        <div class="result-before">
+                            <div class="result-icon">
+                                <i class="far fa-frown"></i>
                             </div>
-                            <div class="comparison-after">
-                                <div class="placeholder-icon">
-                                    <i class="far fa-grin-stars"></i>
-                                    <span>Als Nieuw!</span>
-                                </div>
-                                <span class="comparison-label">Na</span>
+                            <span class="result-label">Voor</span>
+                            <span class="result-desc">UV-schade</span>
+                        </div>
+                        <div class="result-after">
+                            <div class="result-icon">
+                                <i class="far fa-grin-stars"></i>
                             </div>
+                            <span class="result-label">Na</span>
+                            <span class="result-desc">Als nieuw!</span>
                         </div>
                     </div>
-                    <div class="showcase-info">
-                        <h3><i class="fas fa-car-side"></i> Volkswagen Golf</h3>
-                        <p><i class="fas fa-check-circle" style="color: var(--accent);"></i> UV-schade en vergeling volledig verwijderd</p>
+                    <div class="result-info">
+                        <h3><i class="fas fa-car"></i> Volkswagen Golf</h3>
+                        <p>UV-schade en vergeling volledig verwijderd</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Services Section -->
-    <section class="services-section" id="diensten">
+    <!-- WAAROM ONS KIEZEN -->
+    <section class="why-us-section">
         <div class="container">
-            <div class="section-header">
-                <h2>Onze diensten</h2>
-                <p>Kies de service die bij u past</p>
+            <div class="section-header-modern light">
+                <span class="section-tag">Voordelen</span>
+                <h2>Waarom ons kiezen?</h2>
+                <p>Wij gaan voor het beste resultaat, elke keer weer</p>
             </div>
-            <div class="services-grid">
-                <a href="pages/werkplaats-service.html" class="service-card featured">
-                    <div class="service-badge">Aanbevolen</div>
-                    <div class="service-icon">
-                        <i class="fas fa-warehouse"></i>
+            
+            <div class="why-us-grid">
+                <div class="why-us-card">
+                    <div class="why-us-icon">
+                        <i class="fas fa-shield-alt"></i>
                     </div>
-                    <h3>Werkplaats Service</h3>
-                    <p>Breng uw auto naar onze werkplaats. Binnen 2 uur klaar terwijl u wacht. Inclusief gratis koffie en wifi.</p>
-                    <div class="service-price">Vanaf €79,-</div>
-                    <span class="service-link">Meer info <i class="fas fa-arrow-right"></i></span>
-                </a>
+                    <h3>5 jaar bescherming</h3>
+                    <p>Onze speciale coating beschermt uw koplampen jarenlang tegen nieuwe aanslag</p>
+                </div>
                 
-                <a href="pages/mobiele-service.html" class="service-card">
-                    <div class="service-icon">
+                <div class="why-us-card featured">
+                    <div class="why-us-icon">
+                        <i class="fas fa-clock"></i>
+                    </div>
+                    <h3>Binnen 2 uur klaar</h3>
+                    <p>Snelle service zonder lange wachttijden. Wacht terwijl wij werken!</p>
+                </div>
+                
+                <div class="why-us-card">
+                    <div class="why-us-icon">
                         <i class="fas fa-truck"></i>
                     </div>
-                    <h3>Mobiele Service</h3>
-                    <p>Wij komen naar u toe! Thuis, op werk of bij u op locatie. Ideaal voor bedrijven en meerdere auto's.</p>
-                    <div class="service-price">Vanaf €99,-</div>
-                    <span class="service-link">Meer info <i class="fas fa-arrow-right"></i></span>
-                </a>
+                    <h3>Mobiele service</h3>
+                    <p>Wij komen ook naar u toe. Thuis, op werk of bij u op locatie</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TARIEVEN -->
+    <section id="tarieven" class="pricing-section">
+        <div class="container">
+            <div class="section-header-modern">
+                <span class="section-tag">Prijzen</span>
+                <h2>Tarieven</h2>
+                <p>Transparante prijzen, geen verborgen kosten</p>
+            </div>
+            
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <i class="fas fa-warehouse"></i>
+                        <h3>Werkplaats</h3>
+                    </div>
+                    <div class="pricing-price">
+                        <span class="currency">€</span>
+                        <span class="amount">79</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Professionele polijstbehandeling</li>
+                        <li><i class="fas fa-check"></i> UV-beschermende coating</li>
+                        <li><i class="fas fa-check"></i> 5 jaar garantie</li>
+                        <li><i class="fas fa-check"></i> Gratis koffie & wifi</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary btn-full">
+                        <i class="fas fa-calendar-check"></i> Afspraak maken
+                    </a>
+                </div>
                 
-                <a href="pages/koplamp-restauratie.html" class="service-card">
-                    <div class="service-icon">
+                <div class="pricing-card popular">
+                    <div class="popular-badge">Meest gekozen</div>
+                    <div class="pricing-header">
+                        <i class="fas fa-truck"></i>
+                        <h3>Mobiele Service</h3>
+                    </div>
+                    <div class="pricing-price">
+                        <span class="currency">€</span>
+                        <span class="amount">99</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Wij komen naar u toe</li>
+                        <li><i class="fas fa-check"></i> Professionele polijstbehandeling</li>
+                        <li><i class="fas fa-check"></i> UV-beschermende coating</li>
+                        <li><i class="fas fa-check"></i> 5 jaar garantie</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary btn-full">
+                        <i class="fas fa-calendar-check"></i> Afspraak maken
+                    </a>
+                </div>
+                
+                <div class="pricing-card">
+                    <div class="pricing-header">
                         <i class="fas fa-magic"></i>
+                        <h3>Complete Restauratie</h3>
                     </div>
-                    <h3>Koplamp Restauratie</h3>
-                    <p>Voor zwaar beschadigde of gebarsten koplampen. Complete restauratie met garantie.</p>
-                    <div class="service-price">Vanaf €149,-</div>
-                    <span class="service-link">Meer info <i class="fas fa-arrow-right"></i></span>
-                </a>
+                    <div class="pricing-price">
+                        <span class="currency">€</span>
+                        <span class="amount">129</span>
+                    </div>
+                    <ul class="pricing-features">
+                        <li><i class="fas fa-check"></i> Voor zwaar beschadigde koplampen</li>
+                        <li><i class="fas fa-check"></i> Complete restauratie</li>
+                        <li><i class="fas fa-check"></i> Nieuwe coating</li>
+                        <li><i class="fas fa-check"></i> 5 jaar garantie</li>
+                    </ul>
+                    <a href="#contact" class="btn btn-primary btn-full">
+                        <i class="fas fa-calendar-check"></i> Afspraak maken
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT CTA -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="contact-content">
+                <h2>Klaar voor helder zicht?</h2>
+                <p>Bel ons direct of stuur een WhatsApp. Wij zijn bereikbaar van maandag t/m zaterdag.</p>
                 
-                <a href="pages/coating-bescherming.html" class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-shield-alt"></i>
-                    </div>
-                    <h3>Coating & Bescherming</h3>
-                    <p>Extra beschermlaag aanbrengen na polijsten. Beschermt tot 5 jaar tegen UV en weersinvloeden.</p>
-                    <div class="service-price">Vanaf €49,-</div>
-                    <span class="service-link">Meer info <i class="fas fa-arrow-right"></i></span>
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- A-to-Z Service Section -->
-    <section class="atoz-section">
-        <div class="container">
-            <div class="atoz-layout">
-                <div class="atoz-content">
-                    <h2>A-tot-Z Service</h2>
-                    <p class="atoz-intro">Wilt u uw auto laten staan en zorgeloos de sleutels aan ons overdragen? Wij regelen alles!</p>
+                <div class="contact-methods">
+                    <a href="tel:+31612345678" class="contact-btn phone">
+                        <i class="fas fa-phone-alt"></i>
+                        <span>06-12345678</span>
+                    </a>
                     
-                    <div class="atoz-steps">
-                        <div class="atoz-step">
-                            <div class="step-number">1</div>
-                            <div class="step-content">
-                                <h3>Afspraak maken</h3>
-                                <p>Plan online of telefonisch een afspraak op een moment dat u schikt.</p>
-                            </div>
-                        </div>
-                        <div class="atoz-step">
-                            <div class="step-number">2</div>
-                            <div class="step-content">
-                                <h3>Auto brengen</h3>
-                                <p>Breng uw auto naar onze werkplaats. Gratis parkeergelegenheid beschikbaar.</p>
-                            </div>
-                        </div>
-                        <div class="atoz-step">
-                            <div class="step-number">3</div>
-                            <div class="step-content">
-                                <h3>Wij doen de rest</h3>
-                                <p>Wij polijsten uw koplampen professioneel terwijl u geniet van gratis koffie.</p>
-                            </div>
-                        </div>
-                        <div class="atoz-step">
-                            <div class="step-number">4</div>
-                            <div class="step-content">
-                                <h3>Klaar om op te halen</h3>
-                                <p>Binnen 2 uur is uw auto klaar. Glanzende koplampen gegarandeerd!</p>
-                            </div>
-                        </div>
-                    </div>
+                    <a href="https://wa.me/31612345678" class="contact-btn whatsapp">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>WhatsApp ons</span>
+                    </a>
                     
-                    <div class="atoz-warning">
-                        <i class="fas fa-exclamation-triangle"></i>
-                        <div>
-                            <strong>Let op:</strong> Wij raden af om koplampen op te sturen. Transport door derden kan leiden tot beschadiging. Kom langs of laat ons naar u toe komen!
-                        </div>
-                    </div>
-                    
-                    <a href="pages/contact.html" class="btn btn-primary btn-large">
-                        <i class="fas fa-calendar-check"></i> Afspraak maken
+                    <a href="mailto:info@koplampenpolijsten.nl" class="contact-btn email">
+                        <i class="fas fa-envelope"></i>
+                        <span>Mail ons</span>
                     </a>
                 </div>
-                <div class="atoz-image">
-                    <img src="images/atoz-service.jpg" alt="A-tot-Z Service">
-                    <div class="atoz-badge">
-                        <i class="fas fa-check-circle"></i>
-                        <span>Zorgeloos</span>
+                
+                <div class="contact-info-box">
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Autoweg 123, 1234 AB Amsterdam</span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <span>Ma-Vr: 08:00 - 18:00 | Za: 09:00 - 14:00</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- How It Works -->
-    <section class="how-it-works-section" id="hoe-werkt-het">
-        <div class="container">
-            <div class="section-header">
-                <h2>Hoe werkt het?</h2>
-                <p>Professioneel resultaat in 5 stappen</p>
-            </div>
-            <div class="process-grid">
-                <div class="process-step">
-                    <div class="process-icon">
-                        <i class="fas fa-search"></i>
-                        <span class="step-num">01</span>
-                    </div>
-                    <h3>Inspectie</h3>
-                    <p>Wij beoordelen de staat van uw koplampen en bepalen de beste aanpak.</p>
-                </div>
-                <div class="process-step">
-                    <div class="process-icon">
-                        <i class="fas fa-mask"></i>
-                        <span class="step-num">02</span>
-                    </div>
-                    <h3>Afplakken</h3>
-                    <p>Lakwerk en omringende delen worden zorgvuldig afgeplakt voor bescherming.</p>
-                </div>
-                <div class="process-step">
-                    <div class="process-icon">
-                        <i class="fas fa-spray-can"></i>
-                        <span class="step-num">03</span>
-                    </div>
-                    <h3>Polijsten</h3>
-                    <p>Met professionele machines en verschillende fijnheidsgraden polijsten wij de koplamp.</p>
-                </div>
-                <div class="process-step">
-                    <div class="process-icon">
-                        <i class="fas fa-shield-alt"></i>
-                        <span class="step-num">04</span>
-                    </div>
-                    <h3>Coating</h3>
-                    <p>Een UV-bestendige coating beschermt de koplamp tegen toekomstige vergeling.</p>
-                </div>
-                <div class="process-step">
-                    <div class="process-icon">
-                        <i class="fas fa-check-double"></i>
-                        <span class="step-num">05</span>
-                    </div>
-                    <h3>Controle</h3>
-                    <p>Wij controleren de lichtopbrengst en geven u 5 jaar garantie op het resultaat.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Reviews Section -->
-    <section class="reviews-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Wat onze klanten zeggen</h2>
-                <p>Beoordelingen van tevreden klanten</p>
-            </div>
-            <div class="reviews-grid">
-                <div class="review-card">
-                    <div class="review-stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <p class="review-text">"Mijn 15 jaar oude Golf had helemaal gele koplampen. Na 2 uur waren ze als nieuw! Echt ongelooflijk resultaat."</p>
-                    <div class="review-author">
-                        <img src="images/avatar1.jpg" alt="Mark de Vries">
-                        <div>
-                            <strong>Mark de Vries</strong>
-                            <span>Volkswagen Golf</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="review-card">
-                    <div class="review-stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <p class="review-text">"Zakelijke service voor ons wagenpark. 8 auto's in 1 dag gedaan. Zeer professioneel en scherpe prijs."</p>
-                    <div class="review-author">
-                        <img src="images/avatar2.jpg" alt="Lisa Bakker">
-                        <div>
-                            <strong>Lisa Bakker</strong>
-                            <span>Directeur Autobedrijf Bakker</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="review-card">
-                    <div class="review-stars">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </div>
-                    <p class="review-text">"Mobiele service aan huis was perfect. Kon gewoon doorwerken terwijl zij mijn koplampen deden. Aanrader!"</p>
-                    <div class="review-author">
-                        <img src="images/avatar3.jpg" alt="Ahmed Hassan">
-                        <div>
-                            <strong>Ahmed Hassan</strong>
-                            <span>BMW X5</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FAQ Section -->
-    <section class="faq-section">
-        <div class="container">
-            <div class="section-header">
-                <h2>Veelgestelde vragen</h2>
-                <p>Antwoorden op de meest gestelde vragen</p>
-            </div>
-            <div class="faq-grid">
-                <div class="faq-item">
-                    <h3><i class="fas fa-question-circle"></i> Hoelang duurt de behandeling?</h3>
-                    <p>Een standaard koplamp polijst behandeling duurt ongeveer 2 uur. Bij zwaardere beschadiging kan dit iets langer duren.</p>
-                </div>
-                <div class="faq-item">
-                    <h3><i class="fas fa-question-circle"></i> Kan ik wachten terwijl jullie werken?</h3>
-                    <p>Jazeker! In onze werkplaats is een comfortabele wachtruimte met gratis koffie, wifi en tijdschriften.</p>
-                </div>
-                <div class="faq-item">
-                    <h3><i class="fas fa-question-circle"></i> Wat als mijn koplampen gebarsten zijn?</h3>
-                    <p>Geen probleem. Wij bieden ook complete koplamp restauratie aan. Neem contact op voor een vrijblijvende offerte.</p>
-                </div>
-                <div class="faq-item">
-                    <h3><i class="fas fa-question-circle"></i> Is de behandeling APK-goedgekeurd?</h3>
-                    <p>Ja, na onze behandeling voldoen uw koplampen weer aan alle APK-eisen voor lichtopbrengst en lichtverdeling.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="container">
-            <div class="cta-content">
-                <h2>Klaar voor heldere koplampen?</h2>
-                <p>Maak vandaag nog een afspraak en rij morgen veilig</p>
-                <div class="cta-buttons">
-                    <a href="pages/contact.html" class="btn btn-primary btn-large">
-                        <i class="fas fa-calendar-check"></i> Afspraak maken
-                    </a>
-                    <a href="https://wa.me/31612345678" class="btn btn-whatsapp btn-large">
-                        <i class="fab fa-whatsapp"></i> WhatsApp ons
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
+    <!-- FOOTER -->
     <footer class="footer">
         <div class="container">
             <div class="footer-grid">
@@ -495,11 +338,6 @@
                         <span>KoplampenPolijsten</span>
                     </a>
                     <p>Van dof naar glashelder. Professionele koplamp renovatie met 5 jaar garantie.</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                    </div>
                 </div>
                 <div class="footer-links">
                     <h4>Diensten</h4>
@@ -507,34 +345,28 @@
                         <li><a href="pages/werkplaats-service.html">Werkplaats Service</a></li>
                         <li><a href="pages/mobiele-service.html">Mobiele Service</a></li>
                         <li><a href="pages/koplamp-restauratie.html">Koplamp Restauratie</a></li>
-                        <li><a href="pages/coating-bescherming.html">Coating & Bescherming</a></li>
                     </ul>
                 </div>
                 <div class="footer-links">
-                    <h4>Bedrijf</h4>
+                    <h4>Info</h4>
                     <ul>
+                        <li><a href="pages/flyer.html">Flyer</a></li>
+                        <li><a href="#tarieven">Tarieven</a></li>
                         <li><a href="pages/over-ons.html">Over Ons</a></li>
-                        <li><a href="pages/tarieven.html">Tarieven</a></li>
-                        <li><a href="pages/contact.html">Contact</a></li>
-                        <li><a href="pages/privacy.html">Privacybeleid</a></li>
+                        <li><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
                 <div class="footer-contact">
                     <h4>Contact</h4>
                     <ul>
-                        <li><i class="fas fa-map-marker-alt"></i> Autoweg 123, 1234 AB Amsterdam</li>
-                        <li><i class="fas fa-phone"></i> <a href="tel:+31612345678">06-12345678</a></li>
-                        <li><i class="fas fa-envelope"></i> <a href="mailto:info@koplampenpolijsten.nl">info@koplampenpolijsten.nl</a></li>
-                        <li><i class="fas fa-clock"></i> Ma-Vr: 08:00 - 18:00</li>
+                        <li><i class="fas fa-phone"></i> 06-12345678</li>
+                        <li><i class="fas fa-envelope"></i> info@koplampenpolijsten.nl</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Amsterdam</li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
                 <p>&copy; 2026 KoplampenPolijsten.nl. Alle rechten voorbehouden.</p>
-                <div class="footer-legal">
-                    <a href="pages/privacy.html">Privacybeleid</a>
-                    <a href="pages/algemene-voorwaarden.html">Algemene voorwaarden</a>
-                </div>
             </div>
         </div>
     </footer>
