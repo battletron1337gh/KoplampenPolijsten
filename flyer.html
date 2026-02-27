@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KoplampenPolijsten - Flyer</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Open+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0f172a;
+            --accent: #facc15;
+            --accent-dark: #eab308;
+            --secondary: #f97316;
+            --white: #ffffff;
+            --gray-50: #f8fafc;
+            --gray-100: #f1f5f9;
+            --gray-200: #e2e8f0;
+            --gray-600: #475569;
+            --gray-700: #334155;
+            --gray-900: #0f172a;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Open Sans', sans-serif;
+            background: linear-gradient(135deg, var(--gray-100), var(--white));
+            color: var(--gray-700);
+            line-height: 1.6;
+        }
+        
+        .flyer {
+            max-width: 1000px;
+            margin: 2rem auto;
+            background: var(--white);
+            box-shadow: 0 25px 50px rgba(0,0,0,0.15);
+            border-radius: 24px;
+            overflow: hidden;
+        }
+        
+        /* Header */
+        .flyer-header {
+            background: linear-gradient(135deg, var(--primary), #000);
+            color: var(--white);
+            padding: 3rem;
+            text-align: center;
+            position: relative;
+        }
+        
+        .flyer-header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, var(--accent), var(--secondary));
+        }
+        
+        .flyer-logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        
+        .flyer-logo i {
+            font-size: 3rem;
+            color: var(--accent);
+            filter: drop-shadow(0 0 15px rgba(250,204,21,0.6));
+        }
+        
+        .flyer-logo h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.5rem;
+            font-weight: 800;
+        }
+        
+        .flyer-tagline {
+            font-size: 1.3rem;
+            opacity: 0.9;
+        }
+        
+        /* Before/After Section */
+        .before-after-flyer {
+            padding: 4rem 3rem;
+            background: linear-gradient(135deg, var(--gray-50), var(--white));
+        }
+        
+        .section-title {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.2rem;
+            color: var(--primary);
+            text-align: center;
+            margin-bottom: 0.5rem;
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--accent), var(--secondary));
+            margin: 1rem auto;
+            border-radius: 2px;
+        }
+        
+        .section-subtitle {
+            text-align: center;
+            color: var(--gray-600);
+            font-size: 1.1rem;
+            margin-bottom: 3rem;
+        }
+        
+        .showcase-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2.5rem;
+        }
+        
+        .showcase-box {
+            background: var(--white);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border: 3px solid var(--gray-200);
+            transition: all 0.3s;
+        }
+        
+        .showcase-box:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+        
+        .comparison-flyer {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3px;
+            background: var(--gray-300);
+        }
+        
+        .comparison-side {
+            position: relative;
+            aspect-ratio: 4/3;
+            background: linear-gradient(135deg, var(--gray-200), var(--gray-100));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+        
+        .comparison-side.before {
+            filter: grayscale(0.7) brightness(0.6);
+        }
+        
+        .comparison-side.after {
+            background: linear-gradient(135deg, rgba(250,204,21,0.1), var(--white));
+        }
+        
+        .comparison-side i {
+            font-size: 4rem;
+            color: var(--gray-400);
+            margin-bottom: 1rem;
+        }
+        
+        .comparison-side.after i {
+            color: var(--accent);
+            filter: drop-shadow(0 0 20px rgba(250,204,21,0.8));
+        }
+        
+        .comparison-label-flyer {
+            position: absolute;
+            top: 1rem;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+        
+        .comparison-side.before .comparison-label-flyer {
+            left: 1rem;
+            background: var(--gray-700);
+            color: var(--white);
+        }
+        
+        .comparison-side.after .comparison-label-flyer {
+            right: 1rem;
+            background: var(--accent);
+            color: var(--primary);
+        }
+        
+        .showcase-info-flyer {
+            padding: 1.5rem;
+            text-align: center;
+        }
+        
+        .showcase-info-flyer h3 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--primary);
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+        }
+        
+        .showcase-info-flyer p {
+            color: var(--gray-600);
+            font-size: 0.95rem;
+        }
+        
+        /* A-tot-Z Section */
+        .atoz-flyer {
+            padding: 4rem 3rem;
+            background: var(--white);
+        }
+        
+        .atoz-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+        
+        .atoz-header h2 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: 2.2rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+        
+        .atoz-header p {
+            color: var(--gray-600);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            margin-bottom: 2rem;
+        }
+        
+        .step-card {
+            background: linear-gradient(135deg, var(--gray-50), var(--white));
+            border-radius: 16px;
+            padding: 2rem 1.5rem;
+            text-align: center;
+            border: 2px solid var(--gray-200);
+            transition: all 0.3s;
+            position: relative;
+        }
+        
+        .step-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent);
+            box-shadow: 0 10px 30px rgba(250,204,21,0.2);
+        }
+        
+        .step-number-flyer {
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+            color: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: 1.25rem;
+            margin: 0 auto 1rem;
+            box-shadow: 0 4px 15px rgba(250,204,21,0.4);
+        }
+        
+        .step-card h4 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+        }
+        
+        .step-card p {
+            color: var(--gray-600);
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+        
+        .warning-box {
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            padding: 1.5rem;
+            background: linear-gradient(135deg, #fef3c7, #fde68a);
+            border-radius: 16px;
+            border-left: 5px solid var(--accent);
+        }
+        
+        .warning-box i {
+            font-size: 1.5rem;
+            color: var(--secondary);
+            flex-shrink: 0;
+        }
+        
+        .warning-box strong {
+            color: var(--primary);
+        }
+        
+        .warning-box p {
+            color: var(--gray-700);
+            margin: 0;
+        }
+        
+        /* How It Works Section */
+        .how-it-works-flyer {
+            padding: 4rem 3rem;
+            background: linear-gradient(135deg, var(--gray-50), var(--white));
+        }
+        
+        .process-flyer {
+            display: flex;
+            justify-content: space-between;
+            gap: 1.5rem;
+            position: relative;
+        }
+        
+        .process-flyer::before {
+            content: '';
+            position: absolute;
+            top: 60px;
+            left: 10%;
+            right: 10%;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent), var(--secondary), var(--accent));
+            z-index: 0;
+        }
+        
+        .process-item {
+            flex: 1;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .process-icon-flyer {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(135deg, var(--white), var(--gray-50));
+            border: 4px solid var(--accent);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            position: relative;
+            box-shadow: 0 8px 30px rgba(250,204,21,0.25);
+        }
+        
+        .process-icon-flyer i {
+            font-size: 2.5rem;
+            color: var(--primary);
+        }
+        
+        .process-num {
+            position: absolute;
+            top: -5px;
+            right: -5px;
+            width: 40px;
+            height: 40px;
+            background: var(--accent);
+            color: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+            font-size: 0.9rem;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+        }
+        
+        .process-item h4 {
+            font-family: 'Montserrat', sans-serif;
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+        
+        .process-item p {
+            color: var(--gray-600);
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+        
+        /* Footer */
+        .flyer-footer {
+            background: linear-gradient(135deg, var(--primary), var(--gray-900));
+            color: var(--white);
+            padding: 3rem;
+            text-align: center;
+        }
+        
+        .contact-info-flyer {
+            display: flex;
+            justify-content: center;
+            gap: 3rem;
+            flex-wrap: wrap;
+            margin-bottom: 2rem;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        
+        .contact-item i {
+            color: var(--accent);
+            font-size: 1.25rem;
+        }
+        
+        .cta-flyer {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+            color: var(--primary);
+            padding: 1.25rem 2.5rem;
+            border-radius: 12px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+            font-size: 1.2rem;
+            text-decoration: none;
+            margin-top: 1.5rem;
+            box-shadow: 0 8px 25px rgba(250,204,21,0.4);
+            transition: all 0.3s;
+        }
+        
+        .cta-flyer:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 35px rgba(250,204,21,0.5);
+        }
+        
+        /* Print styles */
+        @media print {
+            body { background: white; }
+            .flyer { box-shadow: none; margin: 0; }
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .showcase-grid { grid-template-columns: 1fr; }
+            .steps-grid { grid-template-columns: 1fr; }
+            .process-flyer { flex-direction: column; }
+            .process-flyer::before { display: none; }
+            .contact-info-flyer { flex-direction: column; gap: 1rem; }
+        }
+    </style>
+</head>
+<body>
+    <div class="flyer">
+        <!-- Header -->
+        <div class="flyer-header">
+            <div class="flyer-logo">
+                <i class="fas fa-lightbulb"></i>
+                <h1>KoplampenPolijsten.nl</h1>
+            </div>
+            <p class="flyer-tagline">Van dof naar glashelder • Binnen 2 uur klaar • 5 jaar garantie</p>
+        </div>
+        
+        <!-- Before/After Section -->
+        <div class="before-after-flyer">
+            <h2 class="section-title">Het verschil is dag en nacht</h2>
+            <p class="section-subtitle">Zie het resultaat van onze professionele behandeling</p>
+            
+            <div class="showcase-grid">
+                <div class="showcase-box">
+                    <div class="comparison-flyer">
+                        <div class="comparison-side before">
+                            <i class="far fa-sad-tear"></i>
+                            <span class="comparison-label-flyer">Voor</span>
+                        </div>
+                        <div class="comparison-side after">
+                            <i class="far fa-smile-beam"></i>
+                            <span class="comparison-label-flyer">Na</span>
+                        </div>
+                    </div>
+                    <div class="showcase-info-flyer">
+                        <h3>BMW 3-Serie</h3>
+                        <p>12 jaar oude koplampen volledig gerestaureerd</p>
+                    </div>
+                </div>
+                
+                <div class="showcase-box">
+                    <div class="comparison-flyer">
+                        <div class="comparison-side before">
+                            <i class="far fa-frown"></i>
+                            <span class="comparison-label-flyer">Voor</span>
+                        </div>
+                        <div class="comparison-side after">
+                            <i class="far fa-grin-stars"></i>
+                            <span class="comparison-label-flyer">Na</span>
+                        </div>
+                    </div>
+                    <div class="showcase-info-flyer">
+                        <h3>Volkswagen Golf</h3>
+                        <p>UV-schade en vergeling volledig verwijderd</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- A-tot-Z Service Section -->
+        <div class="atoz-flyer">
+            <div class="atoz-header">
+                <h2>A-tot-Z Service</h2>
+                <p>Wilt u uw auto laten staan en zorgeloos de sleutels aan ons overdragen? <strong>Wij regelen alles!</strong></p>
+            </div>
+            
+            <div class="steps-grid">
+                <div class="step-card">
+                    <div class="step-number-flyer">1</div>
+                    <h4>Afspraak maken</h4>
+                    <p>Plan online of telefonisch een afspraak op een moment dat u schikt</p>
+                </div>
+                
+                <div class="step-card">
+                    <div class="step-number-flyer">2</div>
+                    <h4>Auto brengen</h4>
+                    <p>Breng uw auto naar onze werkplaats. Gratis parkeergelegenheid beschikbaar</p>
+                </div>
+                
+                <div class="step-card">
+                    <div class="step-number-flyer">3</div>
+                    <h4>Wij doen de rest</h4>
+                    <p>Wij polijsten uw koplampen professioneel terwijl u geniet van gratis koffie</p>
+                </div>
+                
+                <div class="step-card">
+                    <div class="step-number-flyer">4</div>
+                    <h4>Klaar om op te halen</h4>
+                    <p>Binnen 2 uur is uw auto klaar. Glanzende koplampen gegarandeerd!</p>
+                </div>
+            </div>
+            
+            <div class="warning-box">
+                <i class="fas fa-exclamation-triangle"></i>
+                <div>
+                    <strong>Let op:</strong> Wij raden af om koplampen op te sturen. Transport door derden kan leiden tot beschadiging. <strong>Kom langs of laat ons naar u toe komen!</strong>
+                </div>
+            </div>
+        </div>
+        
+        <!-- How It Works Section -->
+        <div class="how-it-works-flyer">
+            <h2 class="section-title">Hoe werkt het?</h2>
+            <p class="section-subtitle">Professioneel resultaat in 5 stappen</p>
+            
+            <div class="process-flyer">
+                <div class="process-item">
+                    <div class="process-icon-flyer">
+                        <i class="fas fa-search"></i>
+                        <span class="process-num">01</span>
+                    </div>
+                    <h4>Inspectie</h4>
+                    <p>Wij beoordelen de staat van uw koplampen en bepalen de beste aanpak</p>
+                </div>
+                
+                <div class="process-item">
+                    <div class="process-icon-flyer">
+                        <i class="fas fa-tape"></i>
+                        <span class="process-num">02</span>
+                    </div>
+                    <h4>Afplakken</h4>
+                    <p>Lakwerk en omringende delen worden zorgvuldig afgeplakt voor bescherming</p>
+                </div>
+                
+                <div class="process-item">
+                    <div class="process-icon-flyer">
+                        <i class="fas fa-magic"></i>
+                        <span class="process-num">03</span>
+                    </div>
+                    <h4>Polijsten</h4>
+                    <p>Met professionele machines polijsten wij de koplamp in meerdere fasen</p>
+                </div>
+                
+                <div class="process-item">
+                    <div class="process-icon-flyer">
+                        <i class="fas fa-shield-alt"></i>
+                        <span class="process-num">04</span>
+                    </div>
+                    <h4>Coating</h4>
+                    <p>UV-bestendige coating beschermt tegen toekomstige vergeling</p>
+                </div>
+                
+                <div class="process-item">
+                    <div class="process-icon-flyer">
+                        <i class="fas fa-check-double"></i>
+                        <span class="process-num">05</span>
+                    </div>
+                    <h4>Controle</h4>
+                    <p>Wij controleren de lichtopbrengst en geven <strong>5 jaar garantie</strong></p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Footer -->
+        <div class="flyer-footer">
+            <div class="contact-info-flyer">
+                <div class="contact-item">
+                    <i class="fas fa-phone"></i>
+                    <span>06-12345678</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>info@koplampenpolijsten.nl</span>
+                </div>
+                <div class="contact-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Autoweg 123, Amsterdam</span>
+                </div>
+            </div>
+            
+            <a href="pages/contact.html" class="cta-flyer">
+                <i class="fas fa-calendar-check"></i>
+                Direct een afspraak maken
+            </a>
+        </div>
+    </div>
+</body>
+</html>
+EOF

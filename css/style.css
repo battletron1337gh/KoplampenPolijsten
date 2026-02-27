@@ -448,6 +448,9 @@ h3 { font-size: clamp(1.3rem, 3vw, 1.8rem); }
     position: relative;
     aspect-ratio: 4/3;
     overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .comparison-before img,
@@ -458,7 +461,50 @@ h3 { font-size: clamp(1.3rem, 3vw, 1.8rem); }
 }
 
 .comparison-before {
-    filter: grayscale(0.6) brightness(0.6) contrast(1.1);
+    background: linear-gradient(135deg, #334155, #1e293b);
+}
+
+.comparison-after {
+    background: linear-gradient(135deg, #fef9c3, #fde047);
+}
+
+.placeholder-icon {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+.placeholder-icon i {
+    font-size: 5rem;
+    margin-bottom: 1rem;
+}
+
+.comparison-before .placeholder-icon i {
+    color: #64748b;
+    filter: grayscale(0.5);
+}
+
+.comparison-after .placeholder-icon i {
+    color: var(--primary);
+    filter: drop-shadow(0 0 20px rgba(250,204,21,0.8));
+}
+
+.placeholder-icon span {
+    font-weight: 700;
+    font-size: 1.1rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.comparison-before .placeholder-icon span {
+    color: #94a3b8;
+}
+
+.comparison-after .placeholder-icon span {
+    color: var(--primary);
 }
 
 .comparison-label {
@@ -489,16 +535,30 @@ h3 { font-size: clamp(1.3rem, 3vw, 1.8rem); }
     padding: 2rem;
     text-align: center;
     background: var(--white);
+    border-top: 4px solid var(--accent);
 }
 
 .showcase-info h3 {
     color: var(--primary);
-    margin-bottom: 0.5rem;
+    margin-bottom: 0.75rem;
     font-size: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+}
+
+.showcase-info h3 i {
+    color: var(--accent);
+    font-size: 1.25rem;
 }
 
 .showcase-info p {
     color: var(--gray-600);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
 }
 
 /* SERVICES SECTION */
