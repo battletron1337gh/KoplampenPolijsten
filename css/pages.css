@@ -1,0 +1,431 @@
+/* ========================================
+   STOELAIRBAG - PAGES STYLESHEET
+   Verbeterde styling voor duidelijkere layouts
+   ======================================== */
+
+/* ========================================
+   PAGE HERO - Duidelijker en prominenter
+   ======================================== */
+.page-hero {
+    background: linear-gradient(135deg, var(--primary-blue) 0%, var(--primary-blue-dark) 100%);
+    color: var(--white);
+    padding: calc(80px + var(--space-3xl)) 0 var(--space-3xl);
+    margin-top: 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 5px solid var(--accent-orange);
+}
+
+.page-hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, var(--accent-orange), transparent);
+}
+
+.page-hero .container {
+    position: relative;
+    z-index: 1;
+}
+
+.page-hero h1 {
+    color: var(--white);
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    margin-bottom: var(--space-lg);
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+    font-weight: 800;
+}
+
+.page-hero p {
+    font-size: 1.5rem;
+    opacity: 0.95;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.page-hero-small {
+    padding: calc(80px + var(--space-2xl)) 0 var(--space-2xl);
+}
+
+.page-hero-small h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+}
+
+/* ========================================
+   WEBSHOP - Duidelijker layout
+   ======================================== */
+
+/* Kenteken Search Section - prominenter */
+.kenteken-search-section {
+    background: linear-gradient(135deg, var(--gray-50) 0%, var(--white) 100%);
+    padding: var(--space-3xl) 0;
+    border-bottom: 2px solid var(--gray-200);
+}
+
+.kenteken-search-box {
+    background: var(--white);
+    border-radius: var(--radius-xl);
+    padding: var(--space-3xl);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+    border: 3px solid var(--accent-orange);
+}
+
+.kenteken-search-box h2 {
+    color: var(--primary-blue);
+    margin-bottom: var(--space-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--space-md);
+    font-size: 2rem;
+}
+
+.kenteken-search-box h2 i {
+    color: var(--accent-orange);
+    font-size: 2.5rem;
+}
+
+.kenteken-search-box > p {
+    color: var(--gray-500);
+    margin-bottom: var(--space-2xl);
+    font-size: 1.1rem;
+}
+
+.kenteken-form-large {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.kenteken-input-group-large {
+    display: flex;
+    gap: var(--space-md);
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.kenteken-plate-large {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    background: #facc15;
+    padding: var(--space-md) var(--space-xl);
+    border-radius: var(--radius-md);
+    border: 4px solid var(--gray-800);
+    flex: 1;
+    min-width: 250px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.kenteken-plate-large .nl-flag {
+    font-size: 2.5rem;
+}
+
+.kenteken-plate-large input {
+    background: transparent;
+    border: none;
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    width: 100%;
+    color: var(--gray-800);
+    outline: none;
+    letter-spacing: 2px;
+}
+
+/* Shop Section - betere scheiding */
+.shop-section {
+    padding: var(--space-3xl) 0;
+    background: var(--white);
+}
+
+.shop-layout {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: var(--space-3xl);
+}
+
+/* Sidebar Filters - duidelijker */
+.shop-sidebar {
+    position: sticky;
+    top: 90px;
+    height: fit-content;
+    background: var(--gray-50);
+    padding: var(--space-xl);
+    border-radius: var(--radius-xl);
+    border: 2px solid var(--gray-200);
+}
+
+.filter-widget {
+    background: var(--white);
+    border-radius: var(--radius-lg);
+    padding: var(--space-xl);
+    margin-bottom: var(--space-xl);
+    border: 1px solid var(--gray-200);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+.filter-widget h3 {
+    color: var(--primary-blue);
+    margin-bottom: var(--space-lg);
+    font-size: 1.2rem;
+    font-weight: 700;
+    border-bottom: 2px solid var(--accent-orange);
+    padding-bottom: var(--space-sm);
+}
+
+.filter-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-md);
+}
+
+.filter-list label {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    cursor: pointer;
+    padding: var(--space-sm);
+    color: var(--gray-700);
+    transition: all var(--transition-fast);
+    border-radius: var(--radius-md);
+}
+
+.filter-list label:hover {
+    color: var(--accent-orange);
+    background: var(--gray-50);
+}
+
+.filter-list input[type="checkbox"] {
+    width: 22px;
+    height: 22px;
+    accent-color: var(--accent-orange);
+    cursor: pointer;
+}
+
+.price-range {
+    padding: var(--space-md) 0;
+}
+
+.price-range input[type="range"] {
+    width: 100%;
+    margin-bottom: var(--space-md);
+    accent-color: var(--accent-orange);
+    height: 8px;
+}
+
+.price-labels {
+    display: flex;
+    justify-content: space-between;
+    color: var(--gray-600);
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+/* Shop Header */
+.shop-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--space-xl);
+    padding: var(--space-lg) var(--space-xl);
+    background: var(--gray-50);
+    border-radius: var(--radius-lg);
+    border: 1px solid var(--gray-200);
+}
+
+.shop-results {
+    color: var(--gray-700);
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.shop-sort {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+}
+
+.shop-sort label {
+    color: var(--gray-600);
+    font-weight: 600;
+}
+
+.shop-sort select {
+    padding: var(--space-md) var(--space-xl);
+    border: 2px solid var(--gray-300);
+    border-radius: var(--radius-md);
+    background: var(--white);
+    cursor: pointer;
+    font-weight: 600;
+    color: var(--gray-700);
+}
+
+/* Product Grid - betere kaarten */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: var(--space-xl);
+    margin-bottom: var(--space-3xl);
+}
+
+.product-card {
+    background: var(--white);
+    border-radius: var(--radius-xl);
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    border: 2px solid var(--gray-100);
+    transition: all var(--transition-base);
+    position: relative;
+}
+
+.product-card:hover {
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+    transform: translateY(-8px);
+    border-color: var(--accent-orange);
+}
+
+.product-badge {
+    position: absolute;
+    top: var(--space-md);
+    left: var(--space-md);
+    background: var(--accent-orange);
+    color: var(--white);
+    padding: var(--space-xs) var(--space-lg);
+    border-radius: var(--radius-md);
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    z-index: 2;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.product-badge.badge-new {
+    background: #10b981;
+}
+
+.product-image {
+    position: relative;
+    aspect-ratio: 4/3;
+    overflow: hidden;
+    background: linear-gradient(135deg, var(--gray-100), var(--gray-50));
+    border-bottom: 3px solid var(--gray-100);
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform var(--transition-slow);
+}
+
+.product-card:hover .product-image img {
+    transform: scale(1.08);
+}
+
+.product-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(26,54,93,0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity var(--transition-base);
+}
+
+.product-card:hover .product-overlay {
+    opacity: 1;
+}
+
+.btn-quickview {
+    background: var(--white);
+    color: var(--primary-blue);
+    padding: var(--space-md) var(--space-xl);
+    border-radius: var(--radius-md);
+    font-weight: 700;
+    transform: translateY(20px);
+    transition: all var(--transition-base);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.product-card:hover .btn-quickview {
+    transform: translateY(0);
+}
+
+.product-info {
+    padding: var(--space-xl);
+}
+
+.product-category {
+    display: block;
+    color: var(--accent-orange);
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: var(--space-xs);
+    letter-spacing: 0.5px;
+}
+
+.product-title {
+    font-size: 1.2rem;
+    color: var(--gray-800);
+    margin-bottom: var(--space-md);
+    line-height: 1.4;
+    font-weight: 600;
+}
+
+.product-meta {
+    margin-bottom: var(--space-md);
+    padding: var(--space-sm) 0;
+    border-top: 1px solid var(--gray-100);
+    border-bottom: 1px solid var(--gray-100);
+}
+
+.product-compatibility {
+    display: flex;
+    align-items: center;
+    gap: var(--space-sm);
+    font-size: 0.9rem;
+    color: var(--gray-600);
+}
+
+.product-compatibility i {
+    color: #10b981;
+    font-size: 1.1rem;
+}
+
+.product-price {
+    display: flex;
+    align-items: center;
+    gap: var(--space-md);
+    margin-bottom: var(--space-lg);
+}
+
+.price-current {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: var(--primary-blue);
+}
+
+.price-old {
+    font-size: 1.1rem;
+    color: var(--gray-400);
+    text-decoration: line-through;
+}
+
+.btn-add-cart {
+    width: 100%;
+    padding: var(--space-lg);
+    font-size: 1rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
