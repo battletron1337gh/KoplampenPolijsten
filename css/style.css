@@ -249,9 +249,9 @@ body {
 }
 
 /* Hide nav CTA on small screens */
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
     .nav-cta {
-        display: none;
+        display: none !important;
     }
 }
 
