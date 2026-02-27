@@ -146,7 +146,7 @@ body {
     border-radius: 12px;
     padding: 0.5rem 0;
     min-width: 280px;
-    margin-top: 0.5rem;
+    margin-top: 0;
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
@@ -161,13 +161,28 @@ body {
     list-style: none !important;
 }
 
+/* Bridge the gap with invisible padding */
+.has-dropdown::after {
+    content: '';
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    height: 20px;
+    background: transparent;
+}
+
+.has-dropdown:hover::after {
+    display: block;
+}
+
 /* Dropdown - Show on hover */
 .has-dropdown:hover > .dropdown-menu,
-.dropdown-menu:hover {
+.has-dropdown:focus-within > .dropdown-menu {
     opacity: 1;
     visibility: visible;
     pointer-events: auto;
-    transform: translateY(0);
+    transform: translateY(10px);
 }
 
 .dropdown-menu > li {
